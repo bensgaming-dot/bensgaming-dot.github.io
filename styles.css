@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #0073e6;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#home {
+    background-color: #0073e6;
+    color: white;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #f8a600;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #f07d00;
+}
+
+#features {
+    background-color: #fff;
+}
+
+#features h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature-item {
+    text-align: center;
+    width: 30%;
+}
+
+.feature-item img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+#download {
+    background-color: #f0f4f7;
+}
+
+footer {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icon {
+    margin-left: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.social-icon:hover {
+    color: #f8a600;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
